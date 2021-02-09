@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flexbox-1</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<style>
+		html {
+			background: #19252E
+		}
+		body {
+			width: 80%;
+			background: #faffff;
+			margin: 0 auto;
+			margin-top: 20px;
+		}
+		header {
+			max-width: 90%;
+			margin:  0 auto;
+			padding: 20px 0px 20px 0px;
+		}
+		footer {
+			width: 100%;
+			background: white;
+			margin: 0;
+			text-align: center;
+			font-family: 'Roboto', sans-serif;
+			background-color:#19252E;
+			color: aliceblue;
+			
+		}
+
+		/* Text Styles */
+		h1 {
+			color: #b0373b;
+			font-family: 'Nunito Sans', sans-serif;
+			font-size: 2.8em;
+		}
+
+		h2 {
+			color: #005f7f;
+			font-family: 'Roboto', sans-serif;
+			font-size: 2.2em;
+		}
+
+		h3 {
+			color: #005f7f;
+			font-family: 'Roboto', sans-serif;
+			font-size: 1.8em;
+		}
+		
+		p {
+			font-family: 'Roboto', sans-serif;
+			font-size: 1.2em;
+			text-align: left;
+		}
+
+		.container {
+			width: 100%;
+			text-align: center;
+		}
+
+		.cursos {
+			width: 500px;
+			display: inline-block;
+			margin: 1em 2em;
+			border: 3px;
+			border-color: #005f7f;
+			border-style: solid;
+			vertical-align: top;
+		}
+
+		/*FLEXBOX*/
+
+		article {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+
+		section {
+			flex-grow: 1;
+		}
+
+		#wp-mast {
+			order: 3;
+		}
+
+		/* MEDIA QUERY - RESPONSIVE DESIGN*/
+		@media (max-width: 550px) {
+			body {
+				width: 100%;
+				padding: 1em 0 2em;
+			}
+			.cursos {
+				margin: 0 auto;
+				border: none;
+			}
+		}
+
+
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Introducción a Flexbox</h1>
+		<h2>Nivel 1</h2>
+		<p>Flexbox - El módulo de diseño de caja flexible facilita el diseño de una estructura de diseño flexible y receptiva sin usar flotación o posicionamiento.</p>
+	</header>
+	<hr>
+	<div class="container">
+		<h2>Cursos Wordpress</h2>
+		<article class="wrapper">
+			<section class="cursos">
+				<img src="img/laptop.jpg" alt="">
+				<h3>Curso de Fundamentos</h3>
+				<p>En este curso vas a a aprender a instalar Wordpress con garantías. Serás capaz de hacer lo que quieras con él.</p>
+			</section>
+		</article>
+		<article class="wrapper">
+			<section class="cursos" id="wp-mast">
+				<img src="img/cms.jpg" widht="100%" alt="">
+				<h3>Máster WP y Divi</h3>
+				<p>Aprende en profundidad como funciona Wordpress por dentro. Plantillas de E-commerce y plantillas incluidas. Aprenderás a crear tus propias plantillas.</p>
+			</section>
+		</article>
+		<article class="wrapper">
+			<section class="cursos">
+				<img src="img/wordpress.jpg" widht="100%"alt="">
+				<h3>Curso de Curso Post</h3>
+				<p>Crearás tus propias entradas, páginas y blog personalizados. Aumenta tus posibilidades y capacidades.</p>
+			</section>
+		</article>
+	</div>
+	<footer>
+		<div class="copyright-wrapper">
+            &copy; 2020 Miryam Bathilde &#124; Todos los derechos reservados
+        </div>
+	</footer>
+
+</body>
+</html>
